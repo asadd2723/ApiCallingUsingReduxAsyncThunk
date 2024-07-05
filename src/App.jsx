@@ -24,7 +24,7 @@ function App() {
       select.todo.data && select.todo.data.map((e)=>(
         <div key={e.id} className='p-3 flex items-center gap-3'>
           <input className='w-4 h-4' type="checkbox" checked={e.completed} readOnly/>
-          <li className='list-none'>{e.title}</li>
+          <li className={`list-none ${e.completed && "line-through"}`}>{e.title}</li>
         </div>       
       ))
     }
